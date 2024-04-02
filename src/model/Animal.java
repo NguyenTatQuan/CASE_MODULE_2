@@ -1,27 +1,19 @@
 package model;
 
-public abstract class Animal {
-    String name;
-    int age;
-    String description;
-
-    void display() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Description: " + description);
-    }
-
-    abstract void showSound();
-
-    abstract void input();
+public class Animal {
+    private String name;
+    private String type;
+    private int id;
+    private int area;
 
     public Animal() {
     }
 
-    public Animal(String name, int age, String description) {
+    public Animal(String name, String type, int id, int area) {
         this.name = name;
-        this.age = age;
-        this.description = description;
+        this.type = type;
+        this.id = id;
+        this.area = area;
     }
 
     public String getName() {
@@ -32,28 +24,37 @@ public abstract class Animal {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public String getType() {
+        return type;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getDescription() {
-        return description;
+    public int getId() {
+        return id;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getArea() {
+        return area;
+    }
+
+    public void setArea(int area) {
+        this.area = area;
     }
 
     @Override
     public String toString() {
         return "Animal{" +
                 "name='" + name + '\'' +
-                ", age=" + age +
-                ", description='" + description + '\'' +
+                ", type='" + type + '\'' +
+                ", id=" + id +
+                ", area=" + area +
                 '}';
     }
 }
