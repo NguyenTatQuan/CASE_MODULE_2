@@ -2,12 +2,12 @@ package controller;
 
 import model.Book;
 import storage.IReadWriteFile;
-import storage.ReadWriteFile;
+import storage.ReadWriteBook;
 
 import java.util.List;
 
 public class BookManager {
-    private static IReadWriteFile readWriteFile = new ReadWriteFile();
+    private static IReadWriteFile readWriteFile = new ReadWriteBook();
     private static List<Book> books = readWriteFile.readFile();
 
     public static void addNewBook(Book book) {
