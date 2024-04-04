@@ -1,14 +1,9 @@
 package storage;
 
-import model.Book;
-
 import java.util.List;
 
-public interface IReadWriteFile {
-    List<Book> readFile();
-    void writeFile(List<Book> books);
-
-
-
+public interface IReadWriteFile<T>{
+    List<T> readFile();
+    void writeFile(List<T> list );
 
 }

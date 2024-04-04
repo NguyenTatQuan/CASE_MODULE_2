@@ -1,12 +1,13 @@
-package storage;
+package storage.book;
 
 import model.Book;
+import storage.IReadWriteFile;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadWriteBook implements IReadWriteFile {
+public class ReadWriteFile implements IReadWriteFileBook {
     public static final String PATHNAME = "book.txt";
 
     public List<Book> readFile() {

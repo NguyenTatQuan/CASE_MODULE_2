@@ -9,6 +9,16 @@ public class Book implements Serializable {
     private String manufacturer;
     private String description;
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookId='" + bookId + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 
     public Book() {
     }
@@ -61,14 +71,5 @@ public class Book implements Serializable {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "bookId='" + bookId + '\'' +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", manufacturer='" + manufacturer + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
+
 }

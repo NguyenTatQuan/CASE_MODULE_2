@@ -8,9 +8,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-
-
         int choice;
 
         do {
@@ -44,7 +41,7 @@ public class Main {
                     BookManager.removeBook(bookId1);
                     break;
                 case 5:
-                    System.out.print("Nhập mã ssách cần sửa: ");
+                    System.out.print("Nhập mã sách cần sửa: ");
                     String bookIdToEdit = scanner.nextLine();
                     Book updatedBook = createNew(scanner);
                     BookManager.editBook(bookIdToEdit, updatedBook);
