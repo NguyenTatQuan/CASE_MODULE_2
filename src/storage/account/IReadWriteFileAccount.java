@@ -1,4 +1,4 @@
-package storage.Account;
+package storage.account;
 
 import model.Account;
 import storage.IReadWriteFile;

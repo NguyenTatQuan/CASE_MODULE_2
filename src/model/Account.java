@@ -1,7 +1,7 @@
 package model;
 
 public class Account {
-    private int id;
+    private String accountId;
     private String username;
     private String passwork;
     private String role;
@@ -9,19 +9,19 @@ public class Account {
     public Account() {
     }
 
-    public Account(int id, String username, String passwork, String role) {
-        this.id = id;
+    public Account(String accountId, String username, String passwork, String role) {
+        this.accountId = accountId;
         this.username = username;
         this.passwork = passwork;
         this.role = role;
     }
 
-    public int getId() {
-        return id;
+    public String getAccountId() {
+        return accountId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
     }
 
     public String getUsername() {
@@ -51,7 +51,7 @@ public class Account {
     @Override
     public String toString() {
         return "Account{" +
-                "id=" + id +
+                "accountId='" + accountId + '\'' +
                 ", username='" + username + '\'' +
                 ", passwork='" + passwork + '\'' +
                 ", role='" + role + '\'' +

@@ -17,7 +17,7 @@ public class BookManager {
         System.out.println("Sách đã được thêm thành công.");
     }
 
-    public static void displayBookts() {
+    public static void displayBooks() {
         if (books.isEmpty()) {
             System.out.println("Không có sách nào.");
             return;

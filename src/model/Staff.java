@@ -1,30 +1,30 @@
 package model;
 
-public class Staff {
-    private int id;
+public class Staff implements SalaryStaff {
+    private String staffId;
     private String name;
     private String address;
-    private double phone;
-    public double salary(){
-        return 0;
-    }
+    private long phone;
+    private int day;
+    private final double salary = 200;
 
     public Staff() {
     }
 
-    public Staff(int id, String name, String address, double phone) {
-        this.id = id;
+    public Staff(String staffId, String name, String address, long phone, int day) {
+        this.staffId = staffId;
         this.name = name;
         this.address = address;
         this.phone = phone;
+        this.day = day;
     }
 
-    public int getId() {
-        return id;
+    public String getStaffId() {
+        return staffId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setStaffId(String staffId) {
+        this.staffId = staffId;
     }
 
     public String getName() {
@@ -43,21 +43,39 @@ public class Staff {
         this.address = address;
     }
 
-    public double getPhone() {
+    public long getPhone() {
         return phone;
     }
 
-    public void setPhone(double phone) {
+    public void setPhone(long phone) {
         this.phone = phone;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    @Override
+    public double salaryStaff() {
+        return getSalary()*getDay();
     }
 
     @Override
     public String toString() {
         return "staff{" +
-                "id=" + id +
+                "id=" + staffId +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", phone=" + phone +
+                ", salary=" + salaryStaff() +
                 '}';
     }
 }
