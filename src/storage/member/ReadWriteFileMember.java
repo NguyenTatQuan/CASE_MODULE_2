@@ -25,14 +25,13 @@ public class ReadWriteFileMember implements IReadWriteFileMember {
     }
 
     @Override
-    public void writeFile(List<Member> memberss) {
-        try (ObjectOutputStream oosAccount = new ObjectOutputStream(new FileOutputStream(PATHNAMEMEMBER))) {
-            oosAccount.writeObject(memberss);
+    public void writeFile(List<Member> members) {
+        try (ObjectOutputStream oosMember = new ObjectOutputStream(new FileOutputStream(PATHNAMEMEMBER))) {
+            oosMember.writeObject(members);
         } catch (IOException e) {
             System.err.println("Lỗi khi ghi vào file: " + e.getMessage());
         }
     }
-
     private List<Member> getDefaultMembers() {
         return new ArrayList<>();
     }

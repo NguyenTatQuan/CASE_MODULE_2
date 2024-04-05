@@ -1,8 +1,11 @@
 package model;
 
-public class Member {
-    private String name;
+import java.io.Serializable;
+
+public class Member implements Serializable {
     private String MemberId;
+    private String name;
+
     private String phone;
     private double totalValue;
 
@@ -10,7 +13,7 @@ public class Member {
     public Member() {
     }
 
-    public Member(String name, String memberId, String phone, double totalValue) {
+    public Member(String memberId,String name,  String phone, double totalValue) {
         this.name = name;
         MemberId = memberId;
         this.phone = phone;
@@ -52,10 +55,10 @@ public class Member {
     @Override
     public String toString() {
         return "Member{" +
-                "name='" + name + '\'' +
-                ", MemberId='" + MemberId + '\'' +
-                ", phone='" + phone + '\'' +
-                ", totalValue=" + totalValue +
+                ", ID='" + MemberId + '\'' +
+                "Tên thành viên='" + name + '\'' +
+                ", Số điện thoại='" + phone + '\'' +
+                ", Tiền đã đóng=" + totalValue +
                 '}';
     }
 }

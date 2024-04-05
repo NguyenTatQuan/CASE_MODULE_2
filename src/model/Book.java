@@ -10,16 +10,7 @@ public class Book implements DiscountBook,Serializable {
     private String description;
     private final double SALE = 0.8;
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "bookId='" + bookId + '\'' +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", manufacturer='" + manufacturer + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
+
 
     public Book() {
     }
@@ -79,5 +70,16 @@ public class Book implements DiscountBook,Serializable {
     @Override
     public double getMoney() {
         return getPrice()*getSALE();
+    }
+    @Override
+    public String toString() {
+        return "Book{" +
+                "Id='" + bookId + '\'' +
+                ", Tên sách='" + name + '\'' +
+                ", Giá=" + price +
+                ", Nhà sáng tác='" + manufacturer + '\'' +
+                ", Mô tả='" + description + '\'' +
+                ", Giảm giá 20% còn ='" + getMoney() + '\'' +
+                '}';
     }
 }

@@ -1,6 +1,8 @@
 package model;
 
-public class Staff implements SalaryStaff {
+import java.io.Serializable;
+
+public class Staff implements SalaryStaff, Serializable {
     private String staffId;
     private String name;
     private String address;
@@ -72,10 +74,10 @@ public class Staff implements SalaryStaff {
     public String toString() {
         return "staff{" +
                 "id=" + staffId +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", phone=" + phone +
-                ", salary=" + salaryStaff() +
+                ", Tên nhân viên='" + name + '\'' +
+                ", Địa chỉ='" + address + '\'' +
+                ", Số điện thoại=" + phone +
+                ", Lương=" + salaryStaff() +
                 '}';
     }
 }

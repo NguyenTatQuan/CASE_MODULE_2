@@ -1,15 +1,11 @@
 package controller;
-
-import model.Book;
 import model.Staff;
-import storage.IReadWriteFile;
-import storage.book.ReadWriteFileBook;
+import storage.staff.IReadWriteFileStaff;
 import storage.staff.ReadWriteFileStaff;
-
 import java.util.List;
 
 public class StaffManager {
-    private static final IReadWriteFile<Staff> readWriteFile = new ReadWriteFileStaff();
+    private static final IReadWriteFileStaff readWriteFile = new ReadWriteFileStaff();
     private static final List<Staff> staffs = readWriteFile.readFile();
 
     public static void addNewStaff(Staff staff) {

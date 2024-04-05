@@ -1,14 +1,12 @@
 package controller;
 
 import model.Member;
-import storage.IReadWriteFile;
+import storage.member.IReadWriteFileMember;
 import storage.member.ReadWriteFileMember;
-
-
 import java.util.List;
 
 public class MemberManager {
-    private static final IReadWriteFile<Member> readWriteFile = new ReadWriteFileMember();
+    private static final IReadWriteFileMember readWriteFile = new ReadWriteFileMember();
     private static final List<Member> members = readWriteFile.readFile();
 
     public static void addNewMember(Member member) {
@@ -30,7 +28,7 @@ public class MemberManager {
     public static void findMember(String memberId) {
         for (Member member : members) {
             if (member.getMemberId().equals(memberId)) {
-                System.out.println("Thành viên được tìm thấy: " + memberId);
+                System.out.println("Thành viên được tìm thấy: " + member);
                 return;
             }
         }

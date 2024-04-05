@@ -61,12 +61,12 @@ public class MenuBook {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập id: ");
         String bookId = scanner.nextLine();
-        System.out.print("Nhập tên: ");
+        System.out.print("Nhập tên sách: ");
         String name = scanner.nextLine();
-        System.out.print("Nhập giá: ");
+        System.out.print("Nhập giá sách: ");
         double price = scanner.nextDouble();
         scanner.nextLine();
-        System.out.print("Nhập hãng: ");
+        System.out.print("Nhập nhà sáng tác: ");
         String manufacturer = scanner.nextLine();
         System.out.print("Nhập mô tả: ");
         String description = scanner.nextLine();
