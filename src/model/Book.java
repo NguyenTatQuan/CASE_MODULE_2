@@ -79,6 +79,5 @@ public class Book implements DiscountBook,Serializable {
     @Override
     public double getMoney() {
         return getPrice()*getSALE();
-
     }
 }

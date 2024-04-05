@@ -15,12 +15,12 @@ public class StaffManager {
     public static void addNewStaff(Staff staff) {
         staffs.add(staff);
         readWriteFile.writeFile(staffs);
-        System.out.println("Sách đã được thêm thành công.");
+        System.out.println("Nhân viên đã được thêm thành công.");
     }
 
     public static void displayStaffs() {
         if (staffs.isEmpty()) {
-            System.err.println("Không có sách nào.");
+            System.err.println("Không có nhân viên nào.");
             return;
         }
         for (Staff staff : staffs) {
@@ -31,11 +31,11 @@ public class StaffManager {
     public static void findStaff(String staffId) {
         for (Staff staff : staffs) {
             if (staff.getStaffId().equals(staffId)) {
-                System.out.println("Sách được tìm thấy: " + staff);
+                System.out.println("Nhân viên được tìm thấy: " + staff);
                 return;
             }
         }
-        System.err.println("Không tìm thấy sách với mã: " + staffId);
+        System.err.println("Không tìm thấy Nhân viên với mã: " + staffId);
     }
 
     public static void removeStaff(String staffId) {
@@ -49,9 +49,9 @@ public class StaffManager {
         if (staffToRemove != null) {
             staffs.remove(staffToRemove);
             readWriteFile.writeFile(staffs);
-            System.out.println("Sách đã được xóa.");
+            System.out.println("Nhân viên đã được xóa.");
         } else {
-            System.err.println("Không tìm thấy sách với mã: " + staffId);
+            System.err.println("Không tìm thấy Nhân viên với mã: " + staffId);
         }
     }
 
@@ -67,9 +67,9 @@ public class StaffManager {
 
             staffs.set(staffIndex, updatedStaff);
             readWriteFile.writeFile(staffs);
-            System.out.println("Sách đã được cập nhật thành công.");
+            System.out.println("Nhân viên đã được cập nhật thành công.");
         } else {
-            System.err.println("Không tìm thấy sách với mã: " + StaffId);
+            System.err.println("Không tìm thấy Nhân viên với mã: " + StaffId);
         }
     }
 }

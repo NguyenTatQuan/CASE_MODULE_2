@@ -12,6 +12,7 @@ public class Menu {
             System.out.println("\nMenu:");
             System.out.println("1. Quản lý sách");
             System.out.println("2. Quản lý nhân viên");
+            System.out.println("3. Quản lý thành viên");
             System.out.println("0. Thoát");
             System.out.print("Nhập lựa chọn của bạn: ");
             choice = scanner.nextInt();
@@ -23,6 +24,9 @@ public class Menu {
                     break;
                 case 2:
                     MenuStaff.staffManagementMenu();
+                    break;
+                case 3:
+                    MenuMember.memberManagementMenu();
                     break;
                 case 0:
                     System.out.println("Kết thúc chương trình.");
