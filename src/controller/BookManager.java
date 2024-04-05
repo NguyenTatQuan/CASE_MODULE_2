@@ -18,7 +18,7 @@ public class BookManager {
 
     public static void displayBooks() {
         if (books.isEmpty()) {
-            System.out.println("Không có sách nào.");
+            System.err.println("Không có sách nào.");
             return;
         }
         for (Book book : books) {
@@ -33,7 +33,7 @@ public class BookManager {
                 return;
             }
         }
-        System.out.println("Không tìm thấy sách với mã: " + bookId);
+        System.err.println("Không tìm thấy sách với mã: " + bookId);
     }
 
     public static void removeBook(String bookId) {
@@ -49,7 +49,7 @@ public class BookManager {
             readWriteFile.writeFile(books);
             System.out.println("Sách đã được xóa.");
         } else {
-            System.out.println("Không tìm thấy sách với mã: " + bookId);
+            System.err.println("Không tìm thấy sách với mã: " + bookId);
         }
     }
 
@@ -67,7 +67,7 @@ public class BookManager {
             readWriteFile.writeFile(books);
             System.out.println("Sách đã được cập nhật thành công.");
         } else {
-            System.out.println("Không tìm thấy sách với mã: " + BookId);
+            System.err.println("Không tìm thấy sách với mã: " + BookId);
         }
     }
 

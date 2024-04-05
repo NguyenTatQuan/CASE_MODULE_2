@@ -17,7 +17,7 @@ public class MemberManager {
 
     public static void displayMembers() {
         if (members.isEmpty()) {
-            System.out.println("Không có Thành viên nào.");
+            System.err.println("Không có Thành viên nào.");
             return;
         }
         for (Member member : members) {
@@ -32,7 +32,7 @@ public class MemberManager {
                 return;
             }
         }
-        System.out.println("Không tìm thấy Thành viên với mã: " + memberId);
+        System.err.println("Không tìm thấy Thành viên với mã: " + memberId);
     }
 
     public static void removeMember(String memberId) {
@@ -48,7 +48,7 @@ public class MemberManager {
             readWriteFile.writeFile(members);
             System.out.println("Thành viên đã được xóa.");
         } else {
-            System.out.println("Không tìm thấy Thành viên với mã: " + memberId);
+            System.err.println("Không tìm thấy Thành viên với mã: " + memberId);
         }
     }
 
@@ -66,7 +66,7 @@ public class MemberManager {
             readWriteFile.writeFile(members);
             System.out.println("Thành viên đã được cập nhật thành công.");
         } else {
-            System.out.println("Không tìm thấy Thành viên với mã: " + memberId);
+            System.err.println("Không tìm thấy Thành viên với mã: " + memberId);
         }
     }
 }

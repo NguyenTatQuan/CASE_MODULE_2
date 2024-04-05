@@ -4,6 +4,8 @@ import controller.StaffManager;
 import model.Staff;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MenuStaff {
     public static void staffManagementMenu() {
@@ -64,15 +66,27 @@ public class MenuStaff {
         String name = scanner.nextLine();
         System.out.print("Nhập địa chỉ: ");
         String address = scanner.nextLine();
-        System.out.print("Nhập số điện thoại: ");
-        long phone = scanner.nextInt();
+        String phoneStaff;
+        do {
+            System.out.print("Nhập số điện thoại: ");
+            phoneStaff = scanner.nextLine();
+            if (!regexPhoneStaff(phoneStaff)) {
+                System.err.println("Số điện thoại không hợp lệ. Vui lòng nhập lại.");
+            }
+        } while (!regexPhoneStaff(phoneStaff));
         System.out.println("Nhập số ngày làm việc: ");
-        int day = scanner.nextInt();
+        double day = scanner.nextInt();
 
         scanner.nextLine();
 
 
-        return new Staff(staffId, name, address, phone,day);
+        return new Staff(staffId, name, address, phoneStaff ,day);
     }
+    public static boolean regexPhoneStaff(String phoneStaffs) {
+        String regex = "^\\(?(\\d{4})\\)?[- ]?(\\d{3})[- ]?(\\d{3})$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(phoneStaffs);
+        return matcher.matches();
 
+}
 }

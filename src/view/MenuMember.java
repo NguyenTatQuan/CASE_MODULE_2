@@ -4,6 +4,8 @@ import controller.MemberManager;
 import model.Member;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MenuMember {
    public static void memberManagementMenu() {
@@ -11,7 +13,7 @@ public class MenuMember {
         int choice;
 
         do {
-            System.out.println("\nQuản lý Thành viên:");
+            System.out.println("\n\nQuản lý Thành viên:");
             System.out.println("1. Thêm Thành viên mới");
             System.out.println("2. Hiển thị tất cả Thành viên");
             System.out.println("3. Tìm kiếm Thành viên theo mã");
@@ -63,13 +65,26 @@ public class MenuMember {
         String membetId = scanner.nextLine();
         System.out.print("Nhập tên: ");
         String name = scanner.nextLine();
-        System.out.print("Nhập số điện thoại: ");
-        String phone = scanner.nextLine();
+        String phoneMember;
+        do {
+            System.out.print("Nhập số điện thoại: ");
+            phoneMember = scanner.nextLine();
+            if (!regexPhoneNumber(phoneMember)) {
+                System.err.println("Số điện thoại không hợp lệ. Vui lòng nhập lại.");
+            }
+        } while (!regexPhoneNumber(phoneMember));
         System.out.print("Nhập tiền đã đóng: ");
         double totalValue = scanner.nextDouble();
         scanner.nextLine();
 
+        return new Member(membetId, name, phoneMember,totalValue);
+    }
 
-        return new Member(membetId, name, phone,totalValue);
+    //phương thức regex số điện thoại
+    public static boolean regexPhoneNumber(String phoneMembers) {
+        String regex = "^\\(?(\\d{4})\\)?[- ]?(\\d{3})[- ]?(\\d{3})$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(phoneMembers);
+        return matcher.matches();
     }
 }

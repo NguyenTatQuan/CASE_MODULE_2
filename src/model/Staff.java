@@ -6,14 +6,13 @@ public class Staff implements SalaryStaff, Serializable {
     private String staffId;
     private String name;
     private String address;
-    private long phone;
-    private int day;
-    private final double salary = 200;
+    private String phone;
+    private double day;
 
     public Staff() {
     }
 
-    public Staff(String staffId, String name, String address, long phone, int day) {
+    public Staff(String staffId, String name, String address, String phone, double day) {
         this.staffId = staffId;
         this.name = name;
         this.address = address;
@@ -45,15 +44,15 @@ public class Staff implements SalaryStaff, Serializable {
         this.address = address;
     }
 
-    public long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(long phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public int getDay() {
+    public double getDay() {
         return day;
     }
 
@@ -62,6 +61,7 @@ public class Staff implements SalaryStaff, Serializable {
     }
 
     public double getSalary() {
+        double salary = 200;
         return salary;
     }
 
@@ -73,7 +73,7 @@ public class Staff implements SalaryStaff, Serializable {
     @Override
     public String toString() {
         return "staff{" +
-                "id=" + staffId +
+                "ID=" + staffId +
                 ", Tên nhân viên='" + name + '\'' +
                 ", Địa chỉ='" + address + '\'' +
                 ", Số điện thoại=" + phone +
