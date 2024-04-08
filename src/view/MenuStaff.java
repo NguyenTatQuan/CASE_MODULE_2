@@ -9,11 +9,11 @@ import java.util.regex.Pattern;
 
 public class MenuStaff {
     public static void staffManagementMenu() {
-        Scanner scanner= new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int choice;
 
         do {
-            System.out.println("\nQuản lý nhân viên:");
+            System.out.println("\n-------------QUẢN LÝ NHÂN VIÊN-------------");
             System.out.println("1. Hiển thị nhân viên");
             System.out.println("2. Thêm nhân viên");
             System.out.println("3. Sửa nhân viên");
@@ -80,13 +80,14 @@ public class MenuStaff {
         scanner.nextLine();
 
 
-        return new Staff(staffId, name, address, phoneStaff ,day);
+        return new Staff(staffId, name, address, phoneStaff, day);
     }
+
     public static boolean regexPhoneStaff(String phoneStaffs) {
         String regex = "^\\(?(\\d{4})\\)?[- ]?(\\d{3})[- ]?(\\d{3})$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(phoneStaffs);
         return matcher.matches();
 
-}
+    }
 }

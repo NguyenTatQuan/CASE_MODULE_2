@@ -32,6 +32,7 @@ public class ReadWriteFileMember implements IReadWriteFileMember {
             System.err.println("Lỗi khi ghi vào file: " + e.getMessage());
         }
     }
+
     private List<Member> getDefaultMembers() {
         return new ArrayList<>();
     }

@@ -1,10 +1,10 @@
-package facady;
+package facade;
 
 import controller.BookManager;
 import controller.MemberManager;
 import controller.StaffManager;
 
-public class Facady {
+public class FacadeDisplay {
     public void display() {
         System.out.println("\n\n--------  SÁCH  ------ \n");
         BookManager.displayBooks();
@@ -14,6 +14,4 @@ public class Facady {
         StaffManager.displayStaffs();
     }
 
-    public Facady() {
-    }
 }

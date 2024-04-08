@@ -11,7 +11,7 @@ public class MenuBook {
         int choice;
 
         do {
-            System.out.println("\nQuản lý sách:");
+            System.out.println("\n---------QUẢN LÝ SÁCH-----------");
             System.out.println("1. Thêm sách mới");
             System.out.println("2. Hiển thị tất cả sách");
             System.out.println("3. Tìm kiếm sách theo mã");

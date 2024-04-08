@@ -2,14 +2,13 @@ package model;
 
 import java.io.Serializable;
 
-public class Book implements DiscountBook,Serializable {
+public class Book implements DiscountBook, Serializable {
     private String bookId;
     private String name;
     private double price;
     private String manufacturer;
     private String description;
     private final double SALE = 0.8;
-
 
 
     public Book() {
@@ -69,8 +68,9 @@ public class Book implements DiscountBook,Serializable {
 
     @Override
     public double getMoney() {
-        return getPrice()*getSALE();
+        return getPrice() * getSALE();
     }
+
     @Override
     public String toString() {
         return "Book{" +

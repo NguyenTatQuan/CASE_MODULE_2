@@ -67,7 +67,7 @@ public class Staff implements SalaryStaff, Serializable {
 
     @Override
     public double salaryStaff() {
-        return getSalary()*getDay();
+        return getSalary() * getDay();
     }
 
     @Override

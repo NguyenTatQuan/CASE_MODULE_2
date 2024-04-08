@@ -1,21 +1,19 @@
 package view;
 
-import facady.Facady;
+import facade.FacadeDisplay;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Menu {
 
     public static void main(String[] args) {
-        Facady facady= new Facady();
+        FacadeDisplay facade = new FacadeDisplay();
 
-        Scanner scanner=new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int choice;
 
         do {
-            System.out.println("\n---------MENU-----------");
+            System.out.println("\n---------MENU QUẢN LÝ THƯ VIỆN-----------");
             System.out.println("1. Quản lý sách");
             System.out.println("2. Quản lý thành viên");
             System.out.println("3. Quản lý nhân viên");
@@ -35,8 +33,8 @@ public class Menu {
                 case 3:
                     MenuStaff.staffManagementMenu();
                     break;
-                case 4 :
-                    facady.display();
+                case 4:
+                    facade.display();
                     break;
                 case 0:
                     System.out.println("Kết thúc chương trình.");

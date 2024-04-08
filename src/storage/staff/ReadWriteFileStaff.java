@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadWriteFileStaff implements IReadWriteFileStaff{
+public class ReadWriteFileStaff implements IReadWriteFileStaff {
     public static final String PATHNAMESTAFF = "staff.txt";
 
     @Override

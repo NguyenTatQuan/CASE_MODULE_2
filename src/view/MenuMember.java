@@ -8,12 +8,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MenuMember {
-   public static void memberManagementMenu() {
+    public static void memberManagementMenu() {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
         do {
-            System.out.println("\n\nQuản lý Thành viên:");
+            System.out.println("\n\n----------QUẢN LÝ THÀNH VIÊN-----------");
             System.out.println("1. Thêm Thành viên mới");
             System.out.println("2. Hiển thị tất cả Thành viên");
             System.out.println("3. Tìm kiếm Thành viên theo mã");
@@ -77,7 +77,7 @@ public class MenuMember {
         double totalValue = scanner.nextDouble();
         scanner.nextLine();
 
-        return new Member(membetId, name, phoneMember,totalValue);
+        return new Member(membetId, name, phoneMember, totalValue);
     }
 
     //phương thức regex số điện thoại

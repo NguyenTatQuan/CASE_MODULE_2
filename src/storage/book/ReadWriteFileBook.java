@@ -34,6 +34,6 @@ public class ReadWriteFileBook implements IReadWriteFileBook {
     }
 
     private List<Book> getDefaultBooks() {
-        return new ArrayList<>();  // Trả về danh sách sách mặc định nếu không thể đọc từ file
+        return new ArrayList<>();
     }
 }

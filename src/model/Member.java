@@ -13,7 +13,7 @@ public class Member implements Serializable {
     public Member() {
     }
 
-    public Member(String memberId,String name,  String phone, double totalValue) {
+    public Member(String memberId, String name, String phone, double totalValue) {
         this.name = name;
         MemberId = memberId;
         this.phone = phone;
